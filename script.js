@@ -20,7 +20,7 @@
 
  				//console.log(j);
 
- 				$("#table").append("<td class='case whiteCase' id='C" + i + j + "'></td>");
+ 				$("#table").append("<td class='case whiteCase' id='C" + (i+11)  + (j+11) + "'></td>");
 
 
  			}
@@ -51,7 +51,7 @@
 
 		$("#copietable").empty();
 		$('#table').clone().appendTo("#copietable");
-		
+
 		calcul();
 		
 
@@ -99,17 +99,17 @@
 							console.log(nbCases);
 
 
-							if($("#copietable #C"+i+j).hasClass("blackCase")){
+							if($("#copietable #C"+(i+11)+(j+11)).hasClass("blackCase")){
 
 									if(nbCases < 2 || nbCases > 3){
-										$("#C"+i+j).removeClass("blackCase");
-			    						$("#C"+i+j).addClass("whiteCase");
+										$("#C"+(i+11) + (j+11)).removeClass("blackCase");
+			    						$("#C"+(i+11) + (j+11)).addClass("whiteCase");
 									}
 							}
 							else{
 								if(nbCases == 3){
-									$("#C"+i+j).removeClass("whiteCase");
-			    					$("#C"+i+j).addClass("blackCase");
+									$("#C"+(i+11) + (j+11)).removeClass("whiteCase");
+			    					$("#C"+(i+11) + (j+11)).addClass("blackCase");
 								}
 							}
 							//$("#C"+i+j).css("background-color")
@@ -117,26 +117,26 @@
 
 					}
 
-					repeat();
+					//repeat();
 
 			
  	}
 
 
- 	function repeat(){
+ 	// function repeat(){
 
- 		$("#copietable").empty();
-		$('#table').clone().appendTo("#copietable");
+ 	// 	$("#copietable").empty();
+		// $('#table').clone().appendTo("#copietable");
 
- 		setTimeout(calcul, 200);
+ 	// 	setTimeout(calcul, 200);
 
 
- 	}
+ 	// }
 
 
  	function testBlackCase(i,j){
 
- 		if($("#copietable #C"+i+j).hasClass("blackCase")){
+ 		if($("#copietable #C"+(i+11) + (j+11)).hasClass("blackCase")){
  			return 1
  		}
  		else{
