@@ -117,21 +117,21 @@
 
 					}
 
-					//repeat();
+					repeat();
 
 			
  	}
 
 
- 	// function repeat(){
+ 	function repeat(){
 
- 	// 	$("#copietable").empty();
-		// $('#table').clone().appendTo("#copietable");
+ 		$("#copietable").empty();
+		$('#table').clone().appendTo("#copietable");
 
- 	// 	setTimeout(calcul, 200);
+ 		setTimeout(calcul, 50);
 
 
- 	// }
+ 	}
 
 
  	function testBlackCase(i,j){
